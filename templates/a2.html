@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Employee Attrition Prediction</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f2f2f2;
+		}
+
+		h1 {
+			text-align: center;
+			color: #333333;
+		}
+
+		form {
+			margin: 0 auto;
+			width: 50%;
+			border: 1px solid #cccccc;
+			padding: 20px;
+			background-color: #ffffff;
+			box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+		}
+
+		label {
+			display: block;
+			margin-bottom: 5px;
+			color: #333333;
+		}
+
+		input[type=number] {
+			padding: 10px;
+			border: 1px solid #cccccc;
+			border-radius: 5px;
+			width: 100%;
+			box-sizing: border-box;
+			margin-bottom: 10px;
+		}
+
+		input[type=submit] {
+			background-color: #4CAF50;
+			color: #ffffff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+
+		input[type=submit]:hover {
+			background-color: #3e8e41;
+		}
+.n{
+text-align:center;
+font-size:larger;
+
+}
+	</style>
+</head>
+<body>
+	<h1>Employee Attrition Prediction</h1>
+	<form method="POST" action="{{url_for('predict')}}">
+		<label>Age:</label>
+		<input type="number" id="age" name="age" required>
+		<label>Distance From Home:</label>
+		<input type="number" id="DistanceFromHome" name="DistanceFromHome" required>
+		<label >Gender:</label>
+		<input type="number" id="Gender" name="Gender" required>
+		<label for="MartialStatus">Marital Status(male:1/female:0):</label>
+		<input type="number" id="MartialStatus" name="MartialStatus" required>
+		<label >Monthly Income:</label>
+		<input type="number" id="MonthlyIncome" name="MonthlyIncome" required>
+		<label >Over Time:</label>
+		<input type="number" id="OverTime" name="OverTime" required>
+		<label>Percent Salary Hike:</label>
+		<input type="number" id="PercentSalaryHike" name="PercentSalaryHike" required>
+		<label >Work Life Balance:</label>
+		<input type="number" id="WorkLifeBalance" name="WorkLifeBalance" required>
+		<label >Years At Company:</label>
+		<input type="number" id="YearsAtCompany" name="YearsAtCompany" required>
+		<label>Years With Current Manager:</label>
+		<input type="number" id="YearsWithCurrManager" name="YearsWithCurrManager" required>
+		<input type="submit" value="Predict">
+	</form>
+ <p class='n'>{{name}}</p>
+</body>
+</html>
